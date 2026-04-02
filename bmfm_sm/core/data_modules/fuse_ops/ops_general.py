@@ -56,7 +56,7 @@ class OpFormatMPPLabel(OpBase):
             if task_type == "classification"
             else [float(x) for x in label_list]
         )
-        label_list = np.asarray(label_list)
+        label_list = np.asarray(label_list,dtype=np.float32)
         sample_dict[key_out] = label_list
 
         return sample_dict
